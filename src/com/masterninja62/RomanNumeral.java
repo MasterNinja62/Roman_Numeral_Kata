@@ -15,7 +15,7 @@ public class RomanNumeral {
         put('M', 1000);
     }};
 
-    public boolean contains_valid_characters(String roman_numerals) {
+    public boolean contains_valid_roman_characters(String roman_numerals) {
         for(int i = 0; i < roman_numerals.length(); i++) {
             if (!valid_characters.containsKey(roman_numerals.charAt(i)))
                 return false;
