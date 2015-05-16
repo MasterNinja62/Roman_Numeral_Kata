@@ -22,4 +22,8 @@ public class RomanNumeral {
         }
         return true;
     }
+    public boolean contains_valid_integer(Integer arabic_numeral) {
+        return (arabic_numeral >= 0);
+    }
+
 }
