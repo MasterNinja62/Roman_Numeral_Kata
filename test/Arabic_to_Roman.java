@@ -26,15 +26,11 @@ public class Arabic_to_Roman {
 
     @Test
     public void zero_is_valid() {
-        //This test is to simple test that when no characters are provided
-        //It is still deemed valid
         assertEquals(true, romanNumeral.contains_valid_integer(0));
     }
 
     @Test
     public void a_positive_integer_is_valid() {
-        //This test is to simple test that when no characters are provided
-        //It is still deemed valid
         assertEquals(true, romanNumeral.contains_valid_integer(1));
         assertEquals(true, romanNumeral.contains_valid_integer(10));
         assertEquals(true, romanNumeral.contains_valid_integer(42));
