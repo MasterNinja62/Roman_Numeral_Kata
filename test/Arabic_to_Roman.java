@@ -39,4 +39,32 @@ public class Arabic_to_Roman {
         assertEquals("D", romanNumeral.arabic_to_roman(500));
         assertEquals("M", romanNumeral.arabic_to_roman(1000));
     }
+
+    @Test
+    public void values_requiring_subtraction_to_appear() {
+        assertEquals("IV", romanNumeral.arabic_to_roman(4));
+        assertEquals("IX", romanNumeral.arabic_to_roman(9));
+        assertEquals("XL", romanNumeral.arabic_to_roman(40));
+        assertEquals("XC", romanNumeral.arabic_to_roman(90));
+        assertEquals("CD", romanNumeral.arabic_to_roman(400));
+        assertEquals("CM", romanNumeral.arabic_to_roman(900));
+    }
+
+    @Test
+    public void values_requiring_sonsecutive_munerals_to_appear() {
+        assertEquals("II", romanNumeral.arabic_to_roman(2));
+        assertEquals("III", romanNumeral.arabic_to_roman(3));
+        assertEquals("VII", romanNumeral.arabic_to_roman(7));
+        assertEquals("VIII", romanNumeral.arabic_to_roman(8));
+        assertEquals("XX", romanNumeral.arabic_to_roman(20));
+        assertEquals("XXX", romanNumeral.arabic_to_roman(30));
+        assertEquals("LXX", romanNumeral.arabic_to_roman(70));
+        assertEquals("LXXX", romanNumeral.arabic_to_roman(80));
+        assertEquals("CC", romanNumeral.arabic_to_roman(200));
+        assertEquals("CCC", romanNumeral.arabic_to_roman(300));
+        assertEquals("DCC", romanNumeral.arabic_to_roman(700));
+        assertEquals("DCCC", romanNumeral.arabic_to_roman(800));
+        assertEquals("MM", romanNumeral.arabic_to_roman(2000));
+        assertEquals("MMM", romanNumeral.arabic_to_roman(3000));
+    }
 }
