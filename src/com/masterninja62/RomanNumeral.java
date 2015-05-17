@@ -30,7 +30,7 @@ public class RomanNumeral {
             if(map.get(key).equals(value))
                 return key;
         }
-        return null;
+        return '\u0000';
     }
 
     public String roman_to_arabic(String roman_numerals) {
