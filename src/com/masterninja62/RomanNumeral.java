@@ -84,6 +84,7 @@ public class RomanNumeral {
                 String stringified_arabic_numeral = Integer.toString(arabic_numeral);
                 //below value is used to shorten code by knowing if value is in the 10, 100, 1000
                 int current_weight_of_arabic_numeral = 1;
+                //my version of 10 to the X power
                 for (int i = 0; i < stringified_arabic_numeral.length()-1; i++) {
                     current_weight_of_arabic_numeral *= 10;
                 }
