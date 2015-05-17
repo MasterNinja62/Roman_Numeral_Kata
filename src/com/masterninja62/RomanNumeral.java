@@ -62,6 +62,11 @@ public class RomanNumeral {
         String result = "";
         if (arabic_numeral < 0)
             return "Negative numbers are not allowed.";
+        String string_representation = Integer.toString(arabic_numeral);
+
+        for (int i = 0; i < string_representation.length(); i++) {
+            result = "X";
+        }
         return result;
     }
 }

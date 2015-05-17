@@ -67,4 +67,10 @@ public class Arabic_to_Roman {
         assertEquals("MM", romanNumeral.arabic_to_roman(2000));
         assertEquals("MMM", romanNumeral.arabic_to_roman(3000));
     }
+
+
+    @Test
+    public void large_value_test() {
+        assertEquals("MMMCMMC", romanNumeral.arabic_to_roman(5000));
+    }
 }
