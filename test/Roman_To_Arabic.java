@@ -125,7 +125,6 @@ public class Roman_To_Arabic {
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("XM"));
     }
 
-
     @Test
     public void explicitly_called_out_in_kata() {
         assertEquals("1", romanNumeral.roman_to_arabic("I"));
@@ -133,5 +132,11 @@ public class Roman_To_Arabic {
         assertEquals("9", romanNumeral.roman_to_arabic("IX"));
         assertEquals("1066", romanNumeral.roman_to_arabic("MLXVI"));
         assertEquals("1989", romanNumeral.roman_to_arabic("MCMLXXXIX"));
+    }
+
+    @Test
+    public void large_value_test() {
+        //over the top repetition and length
+        assertEquals("6031", romanNumeral.roman_to_arabic("MMMCMMMLXLXXIXVIVIII"));
     }
 }
