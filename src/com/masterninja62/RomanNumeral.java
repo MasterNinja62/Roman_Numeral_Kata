@@ -38,6 +38,8 @@ public class RomanNumeral {
             if ((Integer) max_consecutive_characters.get(last_char) < count)
                 return "Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.";
 
+            result += (Integer) valid_characters.get(last_char);
+
         }
         return Integer.toString(result);
     }
