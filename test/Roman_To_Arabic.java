@@ -107,8 +107,6 @@ public class Roman_To_Arabic {
     }
     @Test
     public void valid_2_char_subtractions() {
-        //Beyond Max valid lengths are provided.
-        //should all be invalid
         assertEquals("4", romanNumeral.roman_to_arabic("IV"));
         assertEquals("9", romanNumeral.roman_to_arabic("IX"));
         assertEquals("40", romanNumeral.roman_to_arabic("XL"));
@@ -119,8 +117,6 @@ public class Roman_To_Arabic {
 
     @Test
     public void invalid_2_char_subtractions() {
-        //Beyond Max valid lengths are provided.
-        //should all be invalid
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IL"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("ID"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IC"));
@@ -132,8 +128,6 @@ public class Roman_To_Arabic {
 
     @Test
     public void explicitly_called_out_in_kata() {
-        //Beyond Max valid lengths are provided.
-        //should all be invalid
         assertEquals("1", romanNumeral.roman_to_arabic("I"));
         assertEquals("3", romanNumeral.roman_to_arabic("III"));
         assertEquals("9", romanNumeral.roman_to_arabic("IX"));
