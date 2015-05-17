@@ -25,7 +25,7 @@ public class Roman_To_Arabic {
         //This test is to simple test that only valid character are detected by
         //the code. Does not determine validity of format
         assertEquals("1", romanNumeral.roman_to_arabic("I"));
-        assertEquals("2", romanNumeral.roman_to_arabic("V"));
+        assertEquals("5", romanNumeral.roman_to_arabic("V"));
         assertEquals("10", romanNumeral.roman_to_arabic("X"));
         assertEquals("50", romanNumeral.roman_to_arabic("L"));
         assertEquals("100", romanNumeral.roman_to_arabic("C"));
@@ -77,13 +77,13 @@ public class Roman_To_Arabic {
     public void beyond_max_consecutive_valid_single_roman_numeral() {
         //Beyond Max valid lengths are provided.
         //should all be invalid
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("IIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("VV"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("XXXX"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("LL"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("CCCC"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("DD"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMM"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("IIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("VV"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("XXXX"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("LL"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("CCCC"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("DD"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMM"));
     }
 
 
@@ -97,13 +97,13 @@ public class Roman_To_Arabic {
     public void beyond_max_consecutive_valid_multiple_roman_numeral() {
         //Beyond Max valid lengths are provided.
         //should all be invalid
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDCCCLXXXVIIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDCCCLXXXVVIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDCCCLXXXXVIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDCCCLLXXXVIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDCCCCLXXXVIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMDDCCCLXXXVIII"));
-        assertEquals("Too many consecutive characters. Valid cap is 'I', 'X', 'C', 'M' 3 times and  'V', 'L', 'D', 1 time.", romanNumeral.roman_to_arabic("MMMMDCCCLXXXVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDCCCLXXXVIIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDCCCLXXXVVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDCCCLXXXXVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDCCCLLXXXVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDCCCCLXXXVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMDDCCCLXXXVIII"));
+        assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMMDCCCLXXXVIII"));
     }
     @Test
     public void valid_2_char_subtractions() {
@@ -121,11 +121,11 @@ public class Roman_To_Arabic {
     public void invalid_2_char_subtractions() {
         //Beyond Max valid lengths are provided.
         //should all be invalid
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("IL"));
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("ID"));
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("IC"));
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("IM"));
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("XD"));
-        assertEquals("Invalid subtraction", romanNumeral.roman_to_arabic("XM"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IL"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("ID"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IC"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IM"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("XD"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("XM"));
     }
 }
