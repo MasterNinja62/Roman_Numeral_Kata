@@ -51,7 +51,7 @@ public class Arabic_to_Roman {
     }
 
     @Test
-    public void values_requiring_sonsecutive_munerals_to_appear() {
+    public void values_requiring_consecutive_munerals_to_appear() {
         assertEquals("II", romanNumeral.arabic_to_roman(2));
         assertEquals("III", romanNumeral.arabic_to_roman(3));
         assertEquals("VII", romanNumeral.arabic_to_roman(7));
@@ -72,5 +72,14 @@ public class Arabic_to_Roman {
     @Test
     public void large_value_test() {
         assertEquals("MMMCMMC", romanNumeral.arabic_to_roman(5000));
+    }
+
+    @Test
+    public void called_out_in_kata() {
+        assertEquals("I", romanNumeral.arabic_to_roman(1));
+        assertEquals("III", romanNumeral.arabic_to_roman(3));
+        assertEquals("IX", romanNumeral.arabic_to_roman(9));
+        assertEquals("MLXVI", romanNumeral.arabic_to_roman(1066));
+        assertEquals("MCMLXXXIX", romanNumeral.arabic_to_roman(1989));
     }
 }

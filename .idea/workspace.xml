@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1855ad8e-f7ed-4534-853b-074cf0350ca8" name="Default" comment="Added one weird test case for fun">
+    <list default="true" id="1855ad8e-f7ed-4534-853b-074cf0350ca8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Roman_Numeral_Kata/Arabic_to_Roman.class" afterPath="$PROJECT_DIR$/out/test/Roman_Numeral_Kata/Arabic_to_Roman.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Roman_Numeral_Kata/com/masterninja62/RomanNumeral.class" afterPath="$PROJECT_DIR$/out/production/Roman_Numeral_Kata/com/masterninja62/RomanNumeral.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Arabic_to_Roman.java" afterPath="$PROJECT_DIR$/test/Arabic_to_Roman.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java" afterPath="$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roman_Numeral_Kata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RomanNumeral.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RomanNumeral.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6929392">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arabic_to_Roman.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Arabic_to_Roman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Arabic_to_Roman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.6666667">
+              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#243#244#0" expanded="true" />
@@ -76,8 +79,8 @@
         <option value="$PROJECT_DIR$/src/Roman_Numeral_Test.java" />
         <option value="$PROJECT_DIR$/test/Roman_Numeral_Test.java" />
         <option value="$PROJECT_DIR$/test/Roman_To_Arabic.java" />
-        <option value="$PROJECT_DIR$/test/Arabic_to_Roman.java" />
         <option value="$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java" />
+        <option value="$PROJECT_DIR$/test/Arabic_to_Roman.java" />
       </list>
     </option>
   </component>
@@ -578,7 +581,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431828374335</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added one weird test case for fun">
+      <created>1431828592071</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1431828592071</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -630,11 +639,20 @@
     <MESSAGE value="Working on Arabic to Roman now. Adding some basic tests for simple translations that will result in a single char returned.&#10;" />
     <MESSAGE value="Updated some more known test cases i prep for development.&#10;" />
     <MESSAGE value="Added one weird case for fun" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added one weird case for fun" />
+    <MESSAGE value="Added one weird test case for fun" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added one weird test case for fun" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -683,10 +701,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Arabic_to_Roman.java">
+    <entry file="file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Arabic_to_Roman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#243#244#0" expanded="true" />
@@ -696,14 +722,6 @@
             <element signature="e#2894#2895#0" expanded="true" />
             <element signature="e#2969#2970#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6929392">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>

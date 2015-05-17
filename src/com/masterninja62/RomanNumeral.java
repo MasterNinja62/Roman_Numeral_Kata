@@ -62,10 +62,60 @@ public class RomanNumeral {
         String result = "";
         if (arabic_numeral < 0)
             return "Negative numbers are not allowed.";
-        String string_representation = Integer.toString(arabic_numeral);
+        int count = 0;
+        while (arabic_numeral > 0) {
 
-        for (int i = 0; i < string_representation.length(); i++) {
-            result = "X";
+            if ((arabic_numeral / 1000 > 0) && count < 3) {
+                result += "M";
+                arabic_numeral -= 1000;
+                count++;
+            } else if (arabic_numeral / 1000 > 0) {
+                result += "CM";
+                arabic_numeral -= 900;
+                count = 1;
+            } else if (arabic_numeral / 100 > 0) {
+                if (arabic_numeral / 900 > 0) {
+                    result += "CM";
+                    arabic_numeral -= 900;
+                } else if (arabic_numeral >= 500) {
+                    result += "D";
+                    arabic_numeral -= 500;
+                }else if (arabic_numeral / 400 > 0) {
+                    result += "CD";
+                    arabic_numeral -= 400;
+                } else {
+                    result += "C";
+                    arabic_numeral -= 100;
+                }
+            } else if (arabic_numeral / 10 > 0) {
+                if (arabic_numeral / 90 > 0) {
+                    result += "XC";
+                    arabic_numeral -= 90;
+                } else if (arabic_numeral >= 50) {
+                    result += "L";
+                    arabic_numeral -= 50;
+                }else if (arabic_numeral / 40> 0) {
+                    result += "XL";
+                    arabic_numeral -= 40;
+                } else {
+                    result += "X";
+                    arabic_numeral -= 10;
+                }
+            } else {
+                if (arabic_numeral / 9 > 0) {
+                    result += "IX";
+                    arabic_numeral -= 9;
+                } else if (arabic_numeral >=  5) {
+                    result += "V";
+                    arabic_numeral -= 5;
+                }else if (arabic_numeral / 4 > 0) {
+                    result += "IV";
+                    arabic_numeral -= 4;
+                } else {
+                    result += "I";
+                    arabic_numeral--;
+                }
+            }
         }
         return result;
     }
