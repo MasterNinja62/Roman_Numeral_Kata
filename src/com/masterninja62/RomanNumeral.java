@@ -58,7 +58,10 @@ public class RomanNumeral {
     }
 
 
-    public boolean contains_valid_integer(Integer arabic_numeral) {
-        return (arabic_numeral >= 0);
+    public String arabic_to_roman(Integer arabic_numeral) {
+        String result = "";
+        if (arabic_numeral < 0)
+            return "Negative numbers are not allowed.";
+        return result;
     }
 }
