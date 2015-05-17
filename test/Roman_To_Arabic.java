@@ -148,8 +148,11 @@ public class Roman_To_Arabic {
     }
 
     @Test
-    public void large_value_test() {
+    public void extra_tests() {
         //over the top repetition and length
         assertEquals("6031", romanNumeral.roman_to_arabic("MMMCMMMLXLXXIXVIVIII"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("LXXIDMII"));
+        //kinda weird but is valid according to Kata description
+        assertEquals("36", romanNumeral.roman_to_arabic("IVIVIVIVIVIVIVIVIV"));
     }
 }
