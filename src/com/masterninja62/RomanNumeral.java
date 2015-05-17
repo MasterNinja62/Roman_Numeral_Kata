@@ -4,7 +4,7 @@ package com.masterninja62;
 import java.util.*;
 
 public class RomanNumeral {
-    private static Map valid_characters = new HashMap<Character, Integer>() {{
+    private static Map<Character, Integer> valid_characters = new HashMap<Character, Integer>() {{
         put('I', 1);
         put('V', 5);
         put('X', 10);
@@ -13,7 +13,7 @@ public class RomanNumeral {
         put('D', 500);
         put('M', 1000);
     }};
-    private static Map max_consecutive_characters = new HashMap<Character, Integer>() {{
+    private static Map<Character, Integer> max_consecutive_characters = new HashMap<Character, Integer>() {{
         put('I', 3);
         put('V', 1);
         put('X', 3);
@@ -25,6 +25,13 @@ public class RomanNumeral {
     private static Set<Character> not_subtractable = new HashSet<>(Arrays.asList(
             new Character[]{'V', 'L', 'D'}));
 
+    private Character getKey(Integer value, Map<Character, Integer> map){
+        for(Character key : map.keySet()){
+            if(map.get(key).equals(value))
+                return key;
+        }
+        return null;
+    }
 
     public String roman_to_arabic(String roman_numerals) {
         char last_char = 'Q'; //used as default as invalid according to valid_characters
@@ -39,19 +46,19 @@ public class RomanNumeral {
             else
                 count = 1;
             //determine subtraction
-            if ((i != 0) && ((Integer) valid_characters.get(current_char) > 10 * (Integer) valid_characters.get(last_char)))
+            if ((i != 0) && (valid_characters.get(current_char) > 10 * valid_characters.get(last_char)))
                 return "Invalid subtraction.";
-            else if ((i != 0) && ((Integer) valid_characters.get(last_char) < (Integer) valid_characters.get(current_char))) {
+            else if ((i != 0) && (valid_characters.get(last_char) < valid_characters.get(current_char))) {
                 if (not_subtractable.contains(last_char))
                     return "Invalid subtraction.";
                 else
                     //this is because it was added last iteration. Therefore must be subtracted twice to obtain desired affect
-                    result -= 2 * (Integer) valid_characters.get(last_char);
+                    result -= 2 * valid_characters.get(last_char);
             }
-            result += (Integer) valid_characters.get(current_char);
+            result += valid_characters.get(current_char);
 
             last_char = roman_numerals.charAt(i);
-            if ((Integer) max_consecutive_characters.get(last_char) < count)
+            if (max_consecutive_characters.get(last_char) < count)
                 return "Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.";
         }
         return Integer.toString(result);
@@ -63,7 +70,8 @@ public class RomanNumeral {
         if (arabic_numeral < 0)
             return "Negative numbers are not allowed.";
         int count = 0;
-        while (arabic_numeral > 0) {
+        while (arabic_numeral != 0) {
+            //prevent more than 3 M's which can occur if large int passed in
             if ((arabic_numeral / 1000 > 0) && count < 3) {
                 result += "M";
                 arabic_numeral -= 1000;
@@ -72,47 +80,29 @@ public class RomanNumeral {
                 result += "CM";
                 arabic_numeral -= 900;
                 count = 1;
-            } else if (arabic_numeral / 100 > 0) {
-                if (arabic_numeral / 900 > 0) {
-                    result += "CM";
-                    arabic_numeral -= 900;
-                } else if (arabic_numeral >= 500) {
-                    result += "D";
-                    arabic_numeral -= 500;
-                }else if (arabic_numeral / 400 > 0) {
-                    result += "CD";
-                    arabic_numeral -= 400;
-                } else {
-                    result += "C";
-                    arabic_numeral -= 100;
-                }
-            } else if (arabic_numeral / 10 > 0) {
-                if (arabic_numeral / 90 > 0) {
-                    result += "XC";
-                    arabic_numeral -= 90;
-                } else if (arabic_numeral >= 50) {
-                    result += "L";
-                    arabic_numeral -= 50;
-                }else if (arabic_numeral / 40> 0) {
-                    result += "XL";
-                    arabic_numeral -= 40;
-                } else {
-                    result += "X";
-                    arabic_numeral -= 10;
-                }
             } else {
-                if (arabic_numeral / 9 > 0) {
-                    result += "IX";
-                    arabic_numeral -= 9;
-                } else if (arabic_numeral >=  5) {
-                    result += "V";
-                    arabic_numeral -= 5;
-                }else if (arabic_numeral / 4 > 0) {
-                    result += "IV";
-                    arabic_numeral -= 4;
+                String stringified_arabic_numeral = Integer.toString(arabic_numeral);
+                //below value is used to shorten code by knowing if value is in the 10, 100, 1000
+                int current_weight_of_arabic_numeral = 1;
+                for (int i = 0; i < stringified_arabic_numeral.length()-1; i++) {
+                    current_weight_of_arabic_numeral *= 10;
+                }
+                int temp_val = arabic_numeral/current_weight_of_arabic_numeral;
+
+                if (temp_val / 9 > 0) {
+                    result += getKey(current_weight_of_arabic_numeral, valid_characters);
+                    result += getKey(current_weight_of_arabic_numeral*10, valid_characters);
+                    arabic_numeral -= 9 * current_weight_of_arabic_numeral;
+                } else if (temp_val >=  5) {
+                    result += getKey(current_weight_of_arabic_numeral*5, valid_characters);
+                    arabic_numeral -= 5 * current_weight_of_arabic_numeral;
+                }else if (temp_val / 4 > 0) {
+                    result += getKey(current_weight_of_arabic_numeral, valid_characters);
+                    result += getKey(current_weight_of_arabic_numeral*5, valid_characters);
+                    arabic_numeral -= 4 * current_weight_of_arabic_numeral;
                 } else {
-                    result += "I";
-                    arabic_numeral--;
+                    result += getKey(current_weight_of_arabic_numeral, valid_characters);
+                    arabic_numeral -= current_weight_of_arabic_numeral;
                 }
             }
         }
