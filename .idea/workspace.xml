@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -41,16 +41,14 @@
       <file leaf-file-name="Arabic_to_Roman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Arabic_to_Roman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6666667">
-              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.5533662">
+              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#243#244#0" expanded="true" />
                 <element signature="e#292#293#0" expanded="true" />
                 <element signature="e#878#879#0" expanded="true" />
                 <element signature="e#943#944#0" expanded="true" />
-                <element signature="e#2894#2895#0" expanded="true" />
-                <element signature="e#2969#2970#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -587,7 +585,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431828592071</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added kata required tests. all green. Looking at refactor">
+      <created>1431831389713</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1431831389713</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -640,18 +644,11 @@
     <MESSAGE value="Updated some more known test cases i prep for development.&#10;" />
     <MESSAGE value="Added one weird case for fun" />
     <MESSAGE value="Added one weird test case for fun" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added one weird test case for fun" />
+    <MESSAGE value="Added kata required tests. all green. Looking at refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added kata required tests. all green. Looking at refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java</url>
-          <line>119</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
@@ -704,23 +701,21 @@
     <entry file="file://$PROJECT_DIR$/src/com/masterninja62/RomanNumeral.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Arabic_to_Roman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.5533662">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#243#244#0" expanded="true" />
             <element signature="e#292#293#0" expanded="true" />
             <element signature="e#878#879#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#2894#2895#0" expanded="true" />
-            <element signature="e#2969#2970#0" expanded="true" />
           </folding>
         </state>
       </provider>

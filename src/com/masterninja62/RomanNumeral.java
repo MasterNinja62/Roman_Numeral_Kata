@@ -64,7 +64,6 @@ public class RomanNumeral {
             return "Negative numbers are not allowed.";
         int count = 0;
         while (arabic_numeral > 0) {
-
             if ((arabic_numeral / 1000 > 0) && count < 3) {
                 result += "M";
                 arabic_numeral -= 1000;
