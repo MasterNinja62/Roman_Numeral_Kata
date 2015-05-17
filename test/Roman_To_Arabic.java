@@ -106,7 +106,7 @@ public class Roman_To_Arabic {
         assertEquals("Too many consecutive characters. Valid cap is 3 for 'I', 'X', 'C', 'M' and 1 for 'V', 'L', 'D'.", romanNumeral.roman_to_arabic("MMMMDCCCLXXXVIII"));
     }
     @Test
-    public void valid_2_char_subtractions() {
+    public void valid_2_char_subtractions_with_subtractable_numeral() {
         assertEquals("4", romanNumeral.roman_to_arabic("IV"));
         assertEquals("9", romanNumeral.roman_to_arabic("IX"));
         assertEquals("40", romanNumeral.roman_to_arabic("XL"));
@@ -116,13 +116,26 @@ public class Roman_To_Arabic {
     }
 
     @Test
-    public void invalid_2_char_subtractions() {
+    public void invalid_2_char_subtractions_with_subtractable_numeral() {
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IL"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("ID"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IC"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("IM"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("XD"));
         assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("XM"));
+    }
+    @Test
+    public void invalid_subtractable_characters() {
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("VX"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("VC"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("VL"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("VD"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("VM"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("LC"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("LD"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("LM"));
+        assertEquals("Invalid subtraction.", romanNumeral.roman_to_arabic("DM"));
+
     }
 
     @Test
